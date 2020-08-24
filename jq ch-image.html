@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/style2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+  <center>
+    <div class="father">
+      <img src="image/m1.jpeg" class="thumb-img" id="thumb-img">
+      <img src="image/m2.jpg" class="thumb-img"id="thumb-img2">
+      <img src="image/m3.jpg" class="thumb-img" id="thumb-img3">
+      <img src="image/m4.jpg" class="thumb-img" id="thumb-img4">
+      <img src="image/m5.jpg" class="thumb-img" id="thumb-img5">
+    </div>
+
+    <div class="lightbox-dark"></div>
+    <div class="lightbox" id="lightbox1">
+
+      <div class="close-btn">X</div>
+      <img src="image/m1.jpeg" class="big-img">
+
+    </div>
+    <div class="lightbox" id="lightbox2">
+
+      <div class="close-btn">X</div>
+      <img src="image/m2.jpg" class="big-img">
+
+    </div>
+    <div class="lightbox" id="lightbox3">
+
+      <div class="close-btn">X</div>
+      <img src="image/m3.jpg" class="big-img">
+
+    </div>
+    <div class="lightbox" id="lightbox4">
+
+      <div class="close-btn">X</div>
+      <img src="image/m4.jpg" class="big-img">
+
+    </div>
+    <div class="lightbox" id="lightbox5">
+
+      <div class="close-btn">X</div>
+      <img src="image/m5.jpg" class="big-img">
+
+    </div>
+    </div>
+    </div>
+
+    <script>
+
+
+    
+      $(document).ready(function () {
+
+
+        $("#thumb-img").click(function () {
+          $("#lightbox1,.lightbox-dark").fadeIn(5000)
+
+        });
+
+       
+
+
+
+        
+        $("#thumb-img2").click(function () {
+          $("#lightbox2 ,.lightbox-dark").fadeIn(5000)
+
+        });
+        $("#thumb-img3").click(function () {
+          $("#lightbox3 ,.lightbox-dark").fadeIn(5000)
+
+        });
+        $("#thumb-img4").click(function () {
+          $("#lightbox4 ,.lightbox-dark").fadeIn(5000)
+
+        });
+        $("#thumb-img5").click(function () {
+          $("#lightbox5 ,.lightbox-dark").fadeIn(5000)
+
+        });
+
+        
+
+        $(".close-btn,.lightbox-dark").click(function () {
+          $(".lightbox,.lightbox-dark").fadeOut(2000)
+
+        });
+
+      });
+    </script>
+</body>
+
+</html>
