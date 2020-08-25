@@ -1,0 +1,158 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/style2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+  <center>
+    <section id="featuredSlider">
+
+
+
+      <div id="slides">
+        <!--   <div class="left" id="perv"> < </div>-->
+        <img src="image/m1.jpeg" class="show1" id="thumb-img" title=" yasss ">
+        <img src="image/m2.jpg" class="thumb-img " id="thumb-img2" title="thank you">
+        <img src="image/m4.jpg" class="thumb-img" id="thumb-img4" title=" hhhhh">
+        <img src="image/m5.jpg" class="thumb-img" id="thumb-img5" title="Happy ">
+
+        <!--  <div class="left"> > </div> -->
+      </div>
+   
+
+      <div id="arrows">
+        <div id="featuredPrev">  </div>
+        <img src="image/m1.jpeg" class="show1" id="slide" title="Funky roots">
+        <div id="featuredNext">  </div>
+     
+      </div>
+
+    </section>
+  </center>
+
+
+  <div class="lightbox-dark"></div>
+  <div class="lightbox" id="lightbox1">
+
+    <div class="close-btn">X</div>
+    <img src="image/m1.jpeg" class="big-img">
+
+  </div>
+  <div class="lightbox" id="lightbox2">
+
+    <div class="close-btn">X</div>
+    <img src="image/m2.jpg" class="big-img">
+
+  </div>
+
+  <div class="lightbox" id="lightbox4">
+
+    <div class="close-btn">X</div>
+    <img src="image/m4.jpg" class="big-img">
+
+  </div>
+  <div class="lightbox" id="lightbox5">
+
+    <div class="close-btn">X</div>
+    <img src="image/m5.jpg" class="big-img">
+
+  </div>
+
+
+  </center>
+
+
+  <script>
+
+
+
+
+
+
+    $(document).ready(function () {
+
+      currentIndex = 0;
+      function slide() {
+
+        if (currentIndex >= $('#slides img').length)
+          currentIndex = 0
+
+        if (currentIndex < 0)
+          currentIndex = $('#slides img').length - 1
+
+        $('#caption, #slide').fadeOut(500, function () {
+          $el = $('#slides img:eq(' + currentIndex + ')');
+          $('#caption').text($el.attr('alt'));
+          $('#slide').attr('src', $el.attr('src'));
+          $('#caption, #slide').fadeIn(500);
+        });
+      }
+      $("#featuredSlider").mouseenter(function(){
+    if (timer) { 
+        clearInterval(timer);
+    }
+});
+$("#featuredSlider").mouseleave(function(){
+    timer = setInterval(function(){
+        currentIndex++;
+        slide();
+    },3000);
+}).mouseleave();
+
+//bind next / prev buttons
+$("#featuredPrev").on('click', function () {
+    currentIndex--;
+    slide();
+});
+$("#featuredNext").on('click', function () {
+    currentIndex++;
+    slide();
+});
+});
+
+
+
+      $(".show1").click(function () {
+        $("#lightbox1,.lightbox-dark").fadeIn(5000)
+
+      });
+
+      $("#thumb-img2").click(function () {
+        $("#lightbox2 ,.lightbox-dark").fadeIn(5000)
+
+      });
+      $("#thumb-img3").click(function () {
+        $("#lightbox3 ,.lightbox-dark").fadeIn(5000)
+
+      });
+      $("#thumb-img4").click(function () {
+        $("#lightbox4 ,.lightbox-dark").fadeIn(5000)
+
+      });
+      $("#thumb-img5").click(function () {
+        $("#lightbox5 ,.lightbox-dark").fadeIn(5000)
+
+      });
+
+
+
+      $(".close-btn,.lightbox-dark").click(function () {
+        $(".lightbox,.lightbox-dark").fadeOut(2000)
+
+      });
+
+  
+  </script>
+</body>
+
+</html>
