@@ -1,20 +1,4 @@
-.left{
 
-   
-  
-    cursor: pointer;
-    border-radius: 5%;
-    
-color: indianred;
-
-font-size: 80px;
-display: inline;
-padding: 50px;
-padding-top: 80px;
-margin-bottom: -50px;
-
-
-}
 
 
 
@@ -22,14 +6,21 @@ margin-bottom: -50px;
 body{
     background-color: grey;
 }
+#arrows{
+  
+   margin-top: 20px;
+  
+
+}
 
 .show1{
-    width: 150px;
-    height: 120px;
+    width: 300px;
+    height: 250px;
     z-index: 2;
     cursor: pointer;
     border-radius: 5%;
-    margin-top: 8%;   
+    margin-top: 8%; 
+   
     
 }
 
