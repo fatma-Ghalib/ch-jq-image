@@ -53,7 +53,7 @@
   <div class="lightbox" id="lightbox1">
 
     <div class="close-btn">X</div>
-    <img src="image/m1.jpeg" class="big-img">
+    <img src="image/m1.jpeg" class="big-img  ">
 
   </div>
   <div class="lightbox" id="lightbox2">
@@ -132,6 +132,11 @@ $("#featuredNext").on('click', function () {
 
 
       $(".show1").click(function () {
+        $("#lightbox1,.lightbox-dark").fadeIn(5000)
+
+      });
+      
+      $("#thumb-img").click(function () {
         $("#lightbox1,.lightbox-dark").fadeIn(5000)
 
       });
